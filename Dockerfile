@@ -9,6 +9,7 @@ RUN addgroup -g 1000 app && \
 
 # move to user / group
 USER app
+ENV LEGO_PERSONAL_INGRESS_CLASS="liberty"
 WORKDIR /home/app
 
 COPY _build/kube-lego-linux-amd64 /kube-lego
